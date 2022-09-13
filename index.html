@@ -1,49 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Rating state start -->
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+        padding-top: 2rem;
+      }
+      .attribution a {
+        color: lightblue;
+      }
+    </style>
+  </head>
+  <body
+    class="text-[15px] bg-very-dark-blue m-6 flex items-center justify-center min-h-screen flex-col"
+  >
+    <!-- Rating state start -->
+    <div class="main-container bg-dark-blue p-6 rounded-[0.625rem] max-w-[400px]">
+      <img
+        src="./images/icon-star.svg"
+        alt=""
+        class="bg-medium-dark-grey p-2 rounded-full"
+      />
+      <h1 class="text-white mt-8 mx-0 mb-4">How did we do?</h1>
+      <p class="leading-relaxed text-light-grey mb-4">
+        Please let us know how we did with your support request. All feedback is
+        appreciated to help us improve our offering!
+      </p>
+      <ul class="list-none flex items-center justify-between flex-wrap">
+        <li>
+          <button
+            class="btn w-12 h-12 rounded-full bg-medium-dark-grey text-white mb-8 cursor-pointer duration-300 hover:bg-orange focus:bg-medium-grey"
+          >
+            1
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn w-12 h-12 rounded-full bg-medium-dark-grey text-white mb-8 cursor-pointer duration-300 hover:bg-orange focus:bg-medium-grey"
+          >
+            2
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn w-12 h-12 rounded-full bg-medium-dark-grey text-white mb-8 cursor-pointer duration-300 hover:bg-orange focus:bg-medium-grey"
+          >
+            3
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn w-12 h-12 rounded-full bg-medium-dark-grey text-white mb-8 cursor-pointer duration-300 hover:bg-orange focus:bg-medium-grey"
+          >
+            4
+          </button>
+        </li>
+        <li>
+          <button
+            class="btn w-12 h-12 rounded-full bg-medium-dark-grey text-white mb-8 cursor-pointer duration-300 hover:bg-orange focus:bg-medium-grey"
+          >
+            5
+          </button>
+        </li>
+      </ul>
+      <button
+        class="btn-submit bg-orange w-full p-2 rounded-3xl text-white text-base uppercase tracking-widest cursor-pointer duration-300 hover:bg-white hover:text-orange" id="submit"
+      >
+        Submit
+      </button>
+    </div>
 
-  How did we do?
+    <!-- Rating state end -->
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    <!-- Thank you state start -->
+    <div
+      class="thank-you bg-dark-blue p-6 rounded-[0.625rem] flex flex-col items-center justify-center text-center hide max-w-[400px]"
+    >
+      <img
+        src="./images/illustration-thank-you.svg"
+        alt=""
+        class="block mt-0 mx-auto mb-8"
+      />
+      <p
+        class="leading-relaxed bg-medium-dark-grey rounded-3xl text-orange px-2 pb-0 mb-8"
+      >
+        You selected <span id="rating">5</span>
+        out of 5
+      </p>
+      <h2 class="text-white mb-4">Thank you!</h2>
+      <p class="text-light-grey mb-8 ">
+        We appreciate you taking the time to give a rating. If you ever need
+        more support, don’t hesitate to get in touch!
+      </p>
+      <button
+        class="btn-submit bg-orange w-full p-2 rounded-3xl text-white text-base uppercase tracking-widest cursor-pointer duration-300 hover:bg-white hover:text-orange" id="back"
+      >
+        Go Back
+      </button>
+    </div>
 
-  1 2 3 4 5
+    <!-- Thank you state end -->
 
-  Submit
-
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Wilou</a>.
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
