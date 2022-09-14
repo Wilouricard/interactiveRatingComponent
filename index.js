@@ -16,6 +16,7 @@ submitButton.addEventListener("click", () => {
 goBackButton.addEventListener("click", () => {
   mainContainer.classList.remove("hide");
   thanksContainer.classList.add("hide");
+  submitButton.disabled = true;
 });
 
 // RATING DISPLAY
