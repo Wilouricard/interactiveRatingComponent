@@ -25,8 +25,8 @@ const rates = document.querySelectorAll(".btn");
 rates.forEach((rate) => {
   rate.addEventListener("click", () => {
     rating.innerHTML = rate.innerHTML;
+    submitButton.removeAttribute("disabled");
   });
 });
 
 // LOCK SUBMIT BUTTON IF RATE BUTTON NOT SELECTED
-
